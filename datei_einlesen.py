@@ -7,13 +7,15 @@ with open('/home/tn/bin/einkaufliste.csv', 'r') as fh:
 print(content)
 
 print('---')
+einkaufliste = []
+counter = 1
 firstline = True
 with open('/home/tn/bin/einkaufliste.csv', 'r') as fh:
     for line in fh.readlines():
         if firstline is True:
             firstline = False
             continue
-        print(line)
+#        print(line)
 ##########################################
 #        name = ..
 #        preis = ..
@@ -24,17 +26,20 @@ with open('/home/tn/bin/einkaufliste.csv', 'r') as fh:
         gewicht = int(items[2])
         anzahl = items[3]
         anzahl = int(anzahl[:-1])
-        print(items)
+#        print(items)
 ##########################################
-        print(f'Produkt Name: -{name}-')
-        print(f'Preis: -{preis}-')
-        print(f'Gewicht: -{gewicht}-')
-        print(f'Anzahl: -{anzahl}-')
-        print(gewicht * 3)
+#        print(f'Produkt Name: -{name}-')
+#        print(f'Preis: -{preis}-')
+#        print(f'Gewicht: -{gewicht}-')
+#        print(f'Anzahl: -{anzahl}-')
+#        print(gewicht * 3)
 
-#        nahrungsmittel = {'name': name, 'preis': preis, 'gewicht': gewicht, 'anzahl': anzahl}
+        nahrungsmittel = {'name': name, 'preis': preis, 'gewicht': gewicht, 'anzahl': anzahl}
 
+        einkaufliste.append(nahrungsmittel)
+
+        counter = counter + 1
 # 'Milch',1,1000,4
-
+print(einkaufliste)
 
 

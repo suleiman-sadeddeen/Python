@@ -1,0 +1,53 @@
+produkt0 = {'Name': 'Milch',
+           'Preis': 1,
+           'Anzahl': 4,
+           'gewicht': 3}
+
+produkt1 = {'Name': 'Butter',
+           'Preis': 1,
+           'Anzahl': 2,
+           'gewicht': 1}
+
+produkt2 = {'Name': 'Eier',
+           'Preis': 3,
+           'Anzahl': 1,
+           'gewicht': 6}
+
+produkt3 = {'Name': 'Brot',
+           'Preis': 2,
+           'Anzahl': 1,
+           'gewicht': 4}
+
+produkt4 = {'Name': 'Saft',
+           'Preis': 1,
+           'Anzahl': 5,
+           'gewicht': 2}
+
+produkt5 = {'Name': 'Honig',
+           'Preis': 4,
+           'Anzahl': 1,
+           'gewicht': 1}
+
+produkt6 = {'Name': 'Käse',
+           'Preis': 2,
+           'gewicht': 3}
+
+produkt7 = {'Name': 'Wurst',
+
+           'Preis': 5,
+           'Anzahl': 1,
+           'gewicht': 5}
+
+produkt8 = {'Name': 'Wasser',
+           'Preis': 10,
+           'Anzahl': 1,
+           'gewicht': 10}
+
+produkt9 = {'Name': 'Salat',
+           'Preis': 1,
+           'Anzahl': 2,
+           'gewicht': 3}
+
+
+
+einkaufsliste = [ produkt0, produkt1, produkt2, produkt3, produkt4, produkt5, produkt6, produkt7, produkt8, produkt9 ]
