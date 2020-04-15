@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-a = input('enter a number : ' )
-a = int(a)
 
+a = '123'
 
 try:
-    l = a / 0
-    print(l)
+    int(a)
+    print('Funktioniert doch')
 except:
-    print('das geht nit')
-print('Ende')
+    print('Das hat nicht funktioniert')
+
+print('Ende Program')
 
