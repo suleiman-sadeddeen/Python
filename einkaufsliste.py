@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# -*- coding: utf-8 -*-
 
 def datei_einlesen(Datei):
     einkaufsliste = []
@@ -31,6 +31,9 @@ traglast = int(traglast)
 zaehler = 0
 kosten = 0
 gesamtgewicht = 0
+einkaufsliste_out = '/home/tn/bin/einkaufliste_out.csv'
+output = ''
+output += "'Name','Preis','Gewicht','Anzahl'\n"
 # hier wird eingekauft
 for nahrungsmittel in einkaufsliste:
     produktkosten = nahrungsmittel['Anzahl'] * nahrungsmittel['Preis']
@@ -42,7 +45,16 @@ for nahrungsmittel in einkaufsliste:
     if gesamtgewicht > traglast or kosten > geld:
         break
     print(f'Sie kauften {nahrungsmittel["Anzahl"]} * {nahrungsmittel["Name"]} a`{nahrungsmittel["Preis"]}€ für {produktkosten}€, Gesamtpreis: {kosten}€ {gesamtgewicht}')
+
+    Name = str(nahrungsmittel['Name'])
+    Preis = str(nahrungsmittel['Preis'])
+    Gewicht = str(nahrungsmittel['Gewicht'])
+    Anzahl = str(nahrungsmittel['Anzahl'])
+    output += f"'{Name}',{Preis},{Gewicht},{Anzahl}\n"
     a = input('weiter?')
+
+with open(einkaufsliste_out, 'a') as fh1:
+    fh1.writelines(output)
 
 print('Ende Einkauf')
 
